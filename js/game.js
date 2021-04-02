@@ -39,7 +39,7 @@ class Game{
         form.hide();
         Player.getAllPlayerInfo();
         if(allPlayers!==undefined){
-           var x=0;
+           var x=220;
            var y;
            var index=0;
 

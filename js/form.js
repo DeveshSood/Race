@@ -33,7 +33,7 @@ class Form{
             player.updateCount(player.index);
             
             this.greeting.html("Hello " + player.name);
-            this.greeting.position(displayWidth/2, displayHeight/4);
+            this.greeting.position(displayWidth/2-120, displayHeight/4);
         })
     }
 }
