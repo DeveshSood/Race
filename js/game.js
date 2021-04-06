@@ -75,6 +75,11 @@ class Game{
             player.update();
         }
 
+        if(keyIsDown(DOWN_ARROW)&&player.index!==null){
+            player.distance = player.distance - 10;
+            player.update();
+        }
+
         if(player.distance>4350){
             gameState=2;
           }

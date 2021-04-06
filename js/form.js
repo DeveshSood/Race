@@ -8,6 +8,8 @@ class Form{
         this.title = createElement('h1');
         this.title2 = createElement('h3');
         this.reset = createButton('Reset');
+        this.up = createButton('UP');
+        this.down = createButton('DOWN');
     }
     hide(){
         this.greeting.hide();
@@ -27,6 +29,18 @@ class Form{
         this.input.position(displayWidth/2+30, displayHeight/2-200);
         this.button.position(displayWidth/2+182, displayHeight/2-200);
         this.reset.position(displayWidth/2+600, 30);
+        this.up.position(displayWidth/2-240,displayHeight/2+220);
+        this.down.position(displayWidth/2-250,displayHeight/2+260);
+
+        this.up.mousePressed(()=>{
+            player.distance = player.distance + 10;
+            player.update();
+            });
+
+        this.down.mousePressed(()=>{
+            player.distance = player.distance - 10;
+            player.update();
+            });
 
         this.reset.mousePressed(()=>{
         game.updateState(0);
